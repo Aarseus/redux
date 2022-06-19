@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import Counter from './Counter'
 
 const MyRoutes = () => {
   return (
@@ -7,7 +8,7 @@ const MyRoutes = () => {
 
   <Router>
     <Routes>
-        <Route/>
+        <Route path='/counter' element={<Counter/>}/>
     </Routes>
   </Router>
     </>
