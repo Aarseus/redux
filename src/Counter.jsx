@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux/es/exports'
 const Counter = () => {
-    const counterStore= useSelector(store=>store)
+    const counterStore= useSelector(store=>store.counter)
   //to access store/reducer
 
 
