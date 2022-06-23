@@ -2,7 +2,9 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import {Link} from 'react-router-dom'
 const Navbar = () => {
-  const no_of_items_in_cart=useSelector(store=>store.cartStore.cart_items.length)
+  const cartStore=useSelector(store=>store.cartStore)
+  const cart_items=cartStore.cart_items
+  const no_of_items_in_cart=cart_items.length
   return (
     <>
     <nav className="navbar navbar-expand-lg bg-light">
@@ -19,8 +21,11 @@ const Navbar = () => {
         <li className="nav-item">
           <Link className="nav-link" to="/cart">Cart</Link>
         </li>
-        <li>
-          No. of items in cart:{no_of_items_in_cart}
+        <li className='nav-item'>
+          <Link className="nav-link" to={'/'}>
+            No. of items in cart:{no_of_items_in_cart}
+          </Link>
+          
         </li>
         
       </ul>
