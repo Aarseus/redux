@@ -5,16 +5,20 @@ import CounterReducer from './Reducers/CounterReducer';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import gameReducer from './Reducers/gameReducer';
+import finalRootReducer from './Reducers/finalRootReducer';
 
 function App() {
   // const Counterstore= createStore(CounterReducer)
   // const Gamestore=createStore(gameReducer)
 
-  const rootReducer= combineReducers({
-    counter: CounterReducer,
-    game:gameReducer
-  })
-  const store=createStore(rootReducer)
+  // const rootReducer= combineReducers({
+  //   counter: CounterReducer,
+  //   game:gameReducer
+  // })
+  // const store=createStore(rootReducer)
+
+
+  const store=createStore(finalRootReducer)
   return (
     <div className="App">
 
